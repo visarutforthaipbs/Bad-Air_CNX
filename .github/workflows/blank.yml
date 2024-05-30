@@ -4,14 +4,14 @@ name: update daily pm2.5 from CNX
 # Permissions are needed for automatic updates committing
 permissions:
   contents: write
-  
+
 # The 'on' section is about when this is run
 # workflow_dispatch makes there be a button on GitHub to let you run it manually
 # schedule and cron make it run at certain frequencies
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 jobs:
   daily:
@@ -19,18 +19,19 @@ jobs:
     steps:
       - name: Check out this repo
         uses: actions/checkout@v2
-      
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.10'
-      
+          python-version: "3.10"
+
       - name: Install all necessary packages
-        run: pip install jupyter lxml pandas requests beautifulsoup4 html5lib
-      
-      - name: Scraping today's data
-        run: jupyter nbconvert --to notebook --execute "AQI Updater.ipynb" --stdout
-      
+        run: pip install jupyter lxml pandas requests beautifulsoup4
+
+      - name: Execute Jupyter Notebook
+        run: |
+          jupyter nbconvert --to notebook --execute "AQI Updater.ipynb" --output "AQI Updater Output.ipynb"
+
       - name: Commit and push any changes
         run: |
           git config user.name "Automated"
