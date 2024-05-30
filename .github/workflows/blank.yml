@@ -30,7 +30,7 @@ jobs:
 
       - name: Execute Jupyter Notebook
         run: |
-          jupyter nbconvert --to notebook --execute "AQI Updater.ipynb" --output "AQI Updater Output.ipynb"
+          jupyter nbconvert --to notebook --execute "AQI Updater.ipynb" --inplace
 
       - name: Commit and push any changes
         run: |
