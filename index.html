@@ -1,21 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>The Bad Air Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>🌥️ The bad air website 🏭</h1>
-        <h3>Major cities of the world, ranked by their air quality</h3>
-        <p>The table below auto-updates every hour. Air quality is scored using the <a href="https://www.airnow.gov/aqi/aqi-basics/">US air quality index</a>.</p>
-        <div class="graphic">
-            <iframe title="" aria-label="Table" id="datawrapper-chart-lKGS4" src="https://datawrapper.dwcdn.net/lKGS4/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1799" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-            </script>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <h1>💨 ถังเก็บคุณภาพอากาศเชียงใหม่ 🔥</h1>
+          <h3>เพื่อรวบรวมสถิติว่าชาวเชียงใหม่หายใจกันอย่างไร</h3>
+          <p>
+            ตารางข้างล่างนี้อัพเดททุกๆ 1 วัน และจัดแบ่งสีตามมาตราฐานของ
+            <a href="https://www.airnow.gov/aqi/aqi-basics/"
+              >US air quality index</a
+            >.
+          </p>
         </div>
+      </header>
+      <main>
+        <div class="container">
+          <div class="graphic">
+            <div style="min-height: 131px">
+              <script
+                type="text/javascript"
+                defer
+                src="https://datawrapper.dwcdn.net/4MJ7P/embed.js?v=2"
+                charset="utf-8"
+              ></script>
+              <noscript>
+                <img
+                  src="https://datawrapper.dwcdn.net/4MJ7P/full.png"
+                  alt="Air quality index chart"
+                />
+              </noscript>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-    <div id="footer">
-        <p>This website was made for a tutorial on <a href="https://jonathansoma.com">auto-updating websites</a>.</p>
-    </div>
+    <footer id="footer">
+      <div class="container">
+        <p>
+          ข้อมูลจาก
+          <a href="https://www.airnow.gov/aqi/aqi-basics/"
+            >US air quality index</a
+          >
+          และ
+          <a href="https://www.airvisual.com/">AirVisual</a>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

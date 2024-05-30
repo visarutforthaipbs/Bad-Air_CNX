@@ -1,31 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+html,
 body {
   margin: 0;
-  background-color: aliceblue;
+  padding: 0;
+  height: 100%;
+  background-color: #ffffff; /* White background */
+  font-family: "Noto Sans Thai", sans-serif;
 }
-/* Make the page 700px wide, centered */
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+main {
+  flex: 1;
+}
+
 .container {
-  width: 700px;
+  width: 90%;
+  max-width: 700px;
   margin: 4em auto;
-}
-/* Use a nice font */
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
   text-align: center;
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 2em 0;
+  color: #2e2e2e; /* Dark gray text */
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #4a4a4a; /* Medium gray text */
+}
+
+p {
+  text-align: center;
+  color: #4a4a4a; /* Medium gray text */
+}
+
+a {
+  color: #0066cc; /* Notion blue link color */
 }
 
 .graphic {
-  max-width: 500px;
+  max-width: 100%;
   margin: 2em auto;
 }
 
 #footer {
+  width: 100%;
+  background-color: #f7f7f7; /* Light gray background */
+  border-top: solid #e0e0e0 5px; /* Light gray border */
+  color: #2e2e2e; /* Dark gray text */
+}
+
+#footer .container {
+  padding: 1em 1em;
   text-align: center;
-  padding: 4em;
-  background-color: #f0f1ff;
-  border-top: solid white 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+    margin: 1.5em 0;
+  }
+
+  .container {
+    margin: 2em auto;
+  }
+
+  #footer .container {
+    padding: 1em 1em;
+  }
 }
